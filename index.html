@@ -83,8 +83,22 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="如何用Twincat搭建一个新年动画"><a href="#如何用Twincat搭建一个新年动画" class="headerlink" title="如何用Twincat搭建一个新年动画"></a>如何用Twincat搭建一个新年动画</h1><h5 id="最近在做一个Twincat的项目，作为一个工业自动化资深摸鱼人，正好拿Twincat2练练手，做了一个简单的动画，特指从灰暗的2020到光明的2021的过程。"><a href="#最近在做一个Twincat的项目，作为一个工业自动化资深摸鱼人，正好拿Twincat2练练手，做了一个简单的动画，特指从灰暗的2020到光明的2021的过程。" class="headerlink" title="最近在做一个Twincat的项目，作为一个工业自动化资深摸鱼人，正好拿Twincat2练练手，做了一个简单的动画，特指从灰暗的2020到光明的2021的过程。"></a>最近在做一个Twincat的项目，作为一个工业自动化资深摸鱼人，正好拿Twincat2练练手，做了一个简单的动画，特指从灰暗的2020到光明的2021的过程。</h5><h5 id="实现效果如下"><a href="#实现效果如下" class="headerlink" title="实现效果如下:"></a>实现效果如下:</h5><p><img src="C:\Users\Administrator\Desktop\lincy.gif" alt="lincy"></p>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h5 id="-1"><a href="#-1" class="headerlink" title=""></a></h5>
+        <h1 id="Twincat搭建新年动画"><a href="#Twincat搭建新年动画" class="headerlink" title="Twincat搭建新年动画"></a>Twincat搭建新年动画</h1><p>Twincat简介：</p>
+<p>Twincat2是beckhoff的工业自动化软件，支持IEC-61131的编程方式，编程和操作方式和西门子有着比较大的不同。</p>
+<p>要进行动画的编辑，我们需要两个软件Twincat System Manager 和 Twincat PLC Control 。</p>
+<p>TSM用来进行运行时的选择以及仿真状态的搭建，TPC用来进行逻辑的编写。</p>
+<p>步骤：</p>
+<ol>
+<li>把Twincat从configureMode 切换到RunMode （TSM）</li>
+<li>PLC逻辑程序的编写</li>
+<li>运行测试</li>
+</ol>
+<p>Twincat有个比较强大的地方在于修改扫描周期，其他PLC上不知道有没有，没有留意过。</p>
+<p>这样我们就可以设置比较慢的扫描周期，利用累增以及SFC编程（类似于西门子里的Graph）来实现动画了。</p>
+<p>实现效果如下：</p>
+<p><img src="C:\Users\Administrator\Desktop\TCAni.gif" alt="TCAni"></p>
+<p>项目放在了github上，欢迎自取。</p>
+
       
     </div>
     <footer class="article-footer">
